@@ -26,7 +26,8 @@ public class ServerStuff {
             out.println("new server with port: " + serverSocket.getLocalPort() + " and address: " + serverSocket.getInetAddress());
 
             clientSocket = serverSocket.accept();
-            serverSocket.setSoTimeout(8000);
+            clientSocket.setSoTimeout(29000);
+            serverSocket.setSoTimeout(29000);
 
             System.out.println("new server client with port: " + clientSocket.getPort() + " and address: " + clientSocket.getInetAddress());
 
